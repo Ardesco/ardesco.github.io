@@ -1,0 +1,9 @@
+---
+layout: main
+---
+
+{% for post in site.posts %}
+<h2 class="post-header"><a href="{{ post.url }}">{{ post.title }}</a></h2>
+<p class="info">{{ post.date | date: '%A %B %d, %Y' }} - {{ post.author }} </p>
+<p>{{ post.excerpt }} <a href="{{ post.url }}" class="info">Read full post&#8230;</a></span></p>
+{% endfor %}
