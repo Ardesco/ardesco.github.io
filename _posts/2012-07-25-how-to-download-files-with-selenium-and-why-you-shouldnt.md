@@ -5,6 +5,7 @@ title: "How To Download Files With Selenium And Why You Shouldn’t"
 date: 2012-07-25 20:23:00 +0100
 categories: [testing, webdriver] 
 tags: [Java, Maven, Selenium, WebDriver]
+redirect_from: "/index.php/2012/07/how-to-download-files-with-selenium-and-why-you-shouldnt/"
 ---
 In this blog post I will try and make you think why you are performing automated file download tests, and I will provide some Java code that will enable you to perform file downloads in a cross platform way without resorting to hacks like AutoIT.
 
