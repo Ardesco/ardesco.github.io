@@ -26,6 +26,7 @@ markdown: kramdown
 theme: jekyll-theme-midnight
 gems:
   - jekyll-feed
+  - jekyll-redirect-from
 plugins_dir:
   - jekyll-redirect-from
 whitelist:
