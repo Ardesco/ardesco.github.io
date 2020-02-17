@@ -205,6 +205,7 @@ dt {
       &.fork {
         float: left;
         margin-left: 0px;
+        padding: 0 10px 0 0;
       }
 
       &.downloads {
@@ -307,7 +308,7 @@ section {
   }
 }
 
-.info{
+.info {
   font-size: smaller;
 }
 
