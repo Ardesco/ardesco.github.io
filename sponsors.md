@@ -1,6 +1,10 @@
+---
 layout: page
 title: "PAGE TITLE"
 permalink: /sponsors/
+---
+
+#Thank You
 
 This page is a little shrine to say thank you to those peopele who contribute towards the open source code I upload to Github.
 
