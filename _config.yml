@@ -14,7 +14,8 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: Lazery Reflections
-email: your-email@domain.com
+email: hi@lazeryattack.com
+author: Mark Collin
 description: Random thoughts about testing and technology.
 baseurl: ""
 url: "ardesco.lazerycode.com"
