@@ -24,7 +24,7 @@ github_username:  ardesco
 # Build settings
 markdown: kramdown
 theme: jekyll-theme-midnight
-gems:
+plugins:
   - jekyll-feed
   - jekyll-redirect-from
 plugins_dir:
