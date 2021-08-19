@@ -46,12 +46,12 @@ layout: main
 </div>
 
 <script>
-    let disqus_config = function () {
+    var disqus_config = function () {
         this.page.url = `{{ site.url }}{{ page.url }}`;
         this.page.identifier = '{{ page.id }}';
     };
     (function() { // DON'T EDIT BELOW THIS LINE
-        let d = document, s = d.createElement('script');
+        var d = document, s = d.createElement('script');
         s.src = 'https://ardesco.disqus.com/embed.js';
         s.setAttribute('data-timestamp', +new Date());
         (d.head || d.body).appendChild(s);
