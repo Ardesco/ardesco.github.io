@@ -48,11 +48,11 @@ author:
 nav:
   Home:
     - '/'
-    - { Categories: '/categories/' }
-    - { Tags: '/tags/' }
+    - { Categories: '/categories' }
+    - { Tags: '/tags' }
   About:
     - '/about/'
 
 # Where are tags and categories displayed
-tag_page: '/tags/'
-category_page: '/categories/'
+tag_page: '/tags'
+category_page: '/categories'
