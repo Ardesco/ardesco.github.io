@@ -45,5 +45,5 @@ author:
     twitter: https://twitter.com/ardesco
 
 # Where are tags and categories displayed
-tag_page: '/tags/'
-category_page: '/categories/'
+tag_page: '/tags'
+category_page: '/categories'
