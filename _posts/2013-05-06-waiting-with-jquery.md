@@ -2,8 +2,7 @@
 layout: post
 author: "Mark Collin"
 title: "Waiting with jQuery"
-date: 2013-05-06 13:58:00 +0100
-categories: [Testing, WebDriver] 
+category: Testing
 tags: [jQuery, Selenium, WebDriver]
 ---
 Waiting can be hard, so here are a couple of useful tricks to use with jQuery:

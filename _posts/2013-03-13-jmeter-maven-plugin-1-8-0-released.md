@@ -2,8 +2,7 @@
 layout: post
 author: "Mark Collin"
 title: "JMeter Maven Plugin 1.8.0 Released"
-date: 2013-03-13 22:11:00 +0100
-categories: [JMeter, Testing] 
+category: OSS
 tags: [Automated Testing, JMeter, Performance Testing]
 ---
 I'm a bit late adding this here (I've been distracted updating the wiki for the plugin and doing a bit of running around closing off issues) but thought it would be a good idea to start posting stuff about the JMeter Maven plugin here as well.  Version 1.8.0 of the JMeter Maven Plugin is now available in maven central.

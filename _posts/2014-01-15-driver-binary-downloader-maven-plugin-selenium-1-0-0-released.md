@@ -2,8 +2,7 @@
 layout: post
 author: "Mark Collin"
 title: "The Driver Binary Downloader Maven Plugin for Selenium 1.0.0 Released"
-date: 2014-01-15 23:02:00 +0100
-categories: [Testing, WebDriver] 
+category: Testing
 tags: [Automated Testing, WebDriver, Maven]
 ---
 The initial stable release of the driver-binary-downloader-maven-plugin has been released. This brings in the following changes:

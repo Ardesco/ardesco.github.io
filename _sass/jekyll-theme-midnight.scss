@@ -1,24 +1,19 @@
-@import "normalize";
-@import "fonts";
-@import "rouge-base16-dark.scss";
-
 $max-width: 1280px;
 
 body {
   padding: 0px 0 20px 0px;
   margin: 0px;
-  font: 14px/1.5 "OpenSansRegular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font: 14px/1.5 'OpenSansRegular', "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #f0e7d5;
   font-weight: normal;
   background: #252525;
   background-attachment: fixed !important;
-  background: linear_gradient(#2a2a29, #1c1c1c);
+  background: linear-gradient(#2a2a29, #1c1c1c);
 }
 
 h1, h2, h3, h4, h5, h6 {
   color: #e8e8e8;
   margin: 0 0 10px;
-  font-family: 'OpenSansRegular', "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: normal;
 }
 
@@ -46,7 +41,6 @@ h4, h5, h6 {
 h3 {
   font-size: 18px;
   line-height: 24px;
-  font-family: 'OpenSansRegular', "Helvetica Neue", Helvetica, Arial, sans-serif !important;
   font-weight: normal;
   color: #b6b6b6;
 }
@@ -66,6 +60,10 @@ a small {
   color: #666;
   margin-top: -0.6em;
   display: block;
+}
+
+ul {
+  list-style-image: url('../images/bullet.png');
 }
 
 strong {
@@ -92,7 +90,7 @@ blockquote {
 }
 
 code {
-  font-family: 'Lucida Sans', Monaco, Bitstream Vera Sans Mono, Lucida Console, Terminal, monospace;
+  font-family: Monaco, Bitstream Vera Sans Mono, Lucida Console, Terminal, monospace;
   color: #efefef;
   font-size: 13px;
   margin: 0 4px;
@@ -151,84 +149,11 @@ dt {
   font-weight: normal;
 }
 
-#header {
-  z-index: 100;
-  left: 0;
-  top: 0px;
-  height: 60px;
-  width: 100%;
-  position: fixed;
-  background: url(../images/nav-bg.gif) #353535;
-  border-bottom: 4px solid #434343;
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, .25);
-
-  nav {
-    max-width: $max-width;
-    margin: 0 auto;
-    padding: 0 10px;
-    margin: 6px auto;
-
-    li {
-      font-family: 'OpenSansLight', "Helvetica Neue", Helvetica, Arial, sans-serif;
-      font-weight: normal;
-      list-style: none;
-      display: inline;
-      color: white;
-      line-height: 50px;
-      text-shadow: 0px 1px 0px rgba(0, 0, 0, .2);
-      font-size: 14px;
-
-      a {
-        color: white;
-        border: 1px solid #5d910b;
-        background: linear_gradient(#93bd20, #659e10);
-        border-radius: 2px;
-        box-shadow: inset 0px 1px 0px rgba(255, 255, 255, .3), 0px 3px 7px rgba(0, 0, 0, .7);
-
-        background-color: #93bd20;
-        padding: 10px 12px;
-        margin-top: 6px;
-        line-height: 14px;
-        font-size: 14px;
-        display: inline-block;
-        text-align: center;
-
-        &:hover {
-          background: linear_gradient(#749619, #527f0e);
-          background-color: #659e10;
-          border: 1px solid #527f0e;
-          box-shadow: inset 0px 1px 1px rgba(0, 0, 0, .2), 0px 1px 0px rgba(0, 0, 0, .0);
-        }
-      }
-
-      &.fork {
-        float: left;
-        margin-left: 0px;
-        padding: 0 10px 0 0;
-      }
-
-      &.downloads {
-        float: right;
-        margin-left: 6px;
-      }
-
-      &.title {
-        float: right;
-        margin-right: 10px;
-        font-size: 11px;
-      }
-    }
-  }
-}
-
-.post-wrapper {
-  margin-top: 70px;
-}
-
 section {
   max-width: $max-width;
   padding: 30px 0px 50px 0px;
   margin: 20px 0;
+  margin-top: 70px;
 
   #title {
     border: 0;
@@ -257,18 +182,17 @@ section {
       font-family: 'OpenSansRegular', "Helvetica Neue", Helvetica, Arial, sans-serif;
       font-weight: normal;
       color: #696969;
-      margin-top: -10px;
-
-      &.left {
-        float: left;
-      }
-
-      &.right {
-        float: right;
-      }
+      margin-top: 0px;
     }
-
   }
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
 }
 
 @media print, screen and (max-width: 720px) {
@@ -305,12 +229,4 @@ section {
   nav {
     display: none;
   }
-}
-
-.info {
-  font-size: smaller;
-}
-
-.post-header {
-  margin-bottom: 0;
 }

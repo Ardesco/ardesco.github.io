@@ -2,8 +2,7 @@
 layout: post
 author: "Mark Collin"
 title: "Automated Tests Should Be Living Documentation"
-date: 2014-09-17 06:46:00 +0100
-categories: [Testing] 
+category: Testing
 tags: [Thoughts]
 ---
 To start off let me clarify that when I talk about an automated test in the title, I mean an automated check.  I’m aware of the difference, but most people I interact with on a daily basis still talk about automated tests, not automated checks.

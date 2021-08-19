@@ -2,8 +2,7 @@
 layout: post
 author: "Mark Collin"
 title: "Please Let Manual Testers Be Manual Testers"
-date: 2013-02-24 11:29:00 +0100
-categories: [testing, manual] 
+category: Testing
 tags: [Manual Testing]
 ---
 The testing world seems to have entered a state of flux in the last couple of years where “Automated Testing” is the new nirvana, I suspect this in part due to more and more companies following Google’s lead and starting to hire developers in test. Now in my opinion having people performing these roles is not a bad thing. When you have somebody writing your test framework you want somebody with some experience writing code and making architectural decisions. A developer in test is a very useful and powerful resource in this situation. The problem is that people have seen how useful a developer in test is, and they have decided that every tester should now become a developer in test, even though the majority of testers are probably not going to be performing automated testing, or writing test frameworks.

@@ -2,8 +2,7 @@
 layout: post
 author: "Mark Collin"
 title: "JMeter Maven Plugin 1.9.0 Released"
-date: 2014-01-15 23:10:00 +0100
-categories: [JMeter, Testing] 
+category: OSS
 tags: [Automated Testing, JMeter, Performance Testing]
 ---
 It has been a while since the last release and there are quite a few fixes and improvements.

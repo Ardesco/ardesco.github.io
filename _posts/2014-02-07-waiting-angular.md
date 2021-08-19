@@ -2,8 +2,7 @@
 layout: post
 author: "Mark Collin"
 title: "Waiting for Angular"
-date: 2014-02-07 09:16:00 +0100
-categories: [Testing, WebDriver] 
+category: Testing
 tags: [Java, AngularJS, Selenium, WebDriver]
 ---
 Recently I've spent a fair bit of time working with Angular JS applications and as great as Angular is, it can be a pain when it comes to automating it.

@@ -2,8 +2,7 @@
 layout: post
 author: "Mark Collin"
 title: "Stop Moving So I Can Click You Dammit!"
-date: 2013-02-24 13:46:00 +0100
-categories: [testing, webdriver] 
+category: Testing
 tags: [Java, WebDriver]
 ---
 This is a little trick that some may find useful.

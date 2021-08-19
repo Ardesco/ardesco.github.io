@@ -1,57 +1,46 @@
-<!doctype html>
-<html lang="{{ site.lang | default: "en-US" }}">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>{{ site.title | default: site.github.repository_name }} by {{ site.github.owner_name }}</title>
-    <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
-    <link rel="alternate" type="application/atom+xml" title="{{ site.title }}" href="/feed.xml">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script src="{{ '/assets/js/respond.js' | relative_url }}"></script>
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <!--[if lt IE 8]>
-    <link rel="stylesheet" href="{{ '/assets/css/ie.css' | relative_url }}">
-    <![endif]-->
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+---
+layout: main
+---
 
-</head>
-<body>
-<div id="header">
-    <nav>
-        <li class="fork"><a href="/">Home</a></li>
-        <li class="fork"><a href="/sponsors">Sponsors</a></li>
-    </nav>
-</div><!-- end header -->
-
-<div class="wrapper post-wrapper">
-
-    <section>
-        <div id="title">
-            <h1>{{ page.title }}</h1>
-            <hr>
-            <span class="credits left">Posted by {{ page.author }}</span>
-            <span class="credits right">{{ page.date | date: '%A %B %d, %Y' }}</span>
-        </div>
-        {{ content }}
-        <hr>
-        <p>
-            <a class="btn btn-rss" href="/feed.xml" target="_blank">Subscribe to RSS feed</a>
-        </p>
-    </section>
-
+<div id="title">
+    <h1>{{ page.title }}</h1>
+    <hr>
+    <div class="tags">
+        <span class="left">Category: <a href="{{ site.category_page }}#{{ page.category | slugify }}" class="post-tag">{{ page.category }}</a></span>
+        {% if page.tags %}
+        <span class="right">Tags:
+        {% for tag in page.tags %}
+        <a href="{{ site.tag_page }}#{{ tag | slugify }}" class="post-tag">{{ tag }}</a> {% if forloop.last == false %},{% endif %}
+        {% endfor %}
+    </span>
+    </div>
+    <div class="clear"></div>
+    {% endif %}
+    <div>
+        <span class="credits left">Posted by {{ page.author }}</span>
+        <span class="credits right">{{ page.date | date: '%A %B %d, %Y' }}</span>
+    </div>
+</div>
+<article>
+    {{ content }}
+</article>
+<hr>
+<p>
+    <a class="btn btn-rss" href="/feed.xml" target="_blank">Subscribe to RSS feed</a>
+</p>
+<div class="related">
+    <h2>Related Posts</h2>
+    <ul class="related-posts">
+        {% for post in site.related_posts limit:3 %}
+        <li>
+            <h3>
+                <a href="{{ post.url }}">
+                    {{ post.title }}
+                    <small>{{ post.date | date_to_string }}</small>
+                </a>
+            </h3>
+        </li>
+        {% endfor %}
+    </ul>
 </div>
 
-{% if site.google_analytics %}
-<script type="text/javascript">
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-    ga('create', '{{ site.google_analytics }}', 'auto');
-    ga('send', 'pageview');
-</script>
-{% endif %}
-</body>
-</html>

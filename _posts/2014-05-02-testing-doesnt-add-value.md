@@ -2,8 +2,7 @@
 layout: post
 author: "Mark Collin"
 title: "Testing doesn’t add value?"
-date: 2014-05-02 06:00:00 +0100
-categories: [Testing] 
+category: Testing
 tags: [Thoughts]
 ---
 I was at the London Tester Gathering last night where the mystery speaker was Michael Bolton.During his talk he said something that caused me to pause:

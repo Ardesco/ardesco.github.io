@@ -14,25 +14,45 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: Lazery Reflections
-email: hi@lazeryattack.com
-author: Mark Collin
 description: Random thoughts about testing and technology.
-baseurl: ""
-url: "ardesco.lazerycode.com"
-twitter_username: ardesco
-github_username:  ardesco
+baseurl: "/"
+url: "https://ardesco.lazerycode.com"
 
 # Build settings
 markdown: kramdown
-theme: jekyll-theme-midnight
+
+sass:
+#  style: compressed
+  sass_dir: _sass
 plugins:
   - jekyll-feed
   - jekyll-redirect-from
-plugins_dir:
-  - jekyll-redirect-from
+plugins_dir: jekyll-redirect-from
 whitelist:
   - jekyll-redirect-from
 exclude:
   - Gemfile
   - Gemfile.lock
   - vendor
+
+# About/contact
+email: hi@lazeryattack.com
+author:
+  name: Mark Collin
+  contact:
+    linkedin: https://www.linkedin.com/in/ardesco/
+    github: https://github.com/ardesco
+    twitter: https://twitter.com/ardesco
+
+#Navigation
+nav:
+  Home:
+    - '/'
+    - { Categories: '/categories/' }
+    - { Tags: '/tags/' }
+  About:
+    - '/about/'
+
+# Where are tags and categories displayed
+tag_page: '/tags/'
+category_page: '/categories/'

@@ -2,8 +2,7 @@
 layout: post
 author: "Mark Collin"
 title: "Hacking Mouse Move Events Into Safari Driver The Nasty Way"
-date: 2012-12-02 15:09:00 +0100
-categories: [testing, webdriver] 
+category: Testing
 tags: [Java, Robot, Safari, WebDriver]
 ---
 I thought long and hard before posting this entry because while it works, it's not the real solution (Which is adding the code to enable the Actions classes into Safari driver, something I'm looking at right now to see if I can contribute something useful back to the Selenium community).  I follow the [Selenium](https://groups.google.com/forum/?hl=en-US&fromgroups&pli=1#!forum/selenium-users){:target="_blank"} [WebDriver](https://groups.google.com/forum/?hl=en-US&fromgroups&pli=1#!forum/webdriver){:target="_blank"} mailing lists quite closley and regularly see people overcomplicating and hacking things, usually due to the fact that they did not get instant gratification when trying to do things the right way because they didn't quite get it working the first time.  I really hope people will not use this example to "try and get things working" in other browsers because they don't understand how to use the Actions class, or they can't be bothered to learn how to do things the right way.

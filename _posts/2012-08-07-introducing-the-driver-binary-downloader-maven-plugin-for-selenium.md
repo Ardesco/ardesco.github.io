@@ -2,11 +2,9 @@
 layout: post
 author: "Mark Collin"
 title: "Introducing The Driver Binary Downloader Maven Plugin For Selenium"
-date: 2012-08-12 23:02:00 +0100
-categories: [testing, webdriver]
+category: Testing
 tags: [Automated Testing, Java, Selenium, WebDriver]
 ---
-
 I'm a regular Maven user and one thing that has annoyed me for a while with Selenium is the standalone server binaries.  Not because I think the concept is a bad thing, but because it adds a dependency that has to be manually downloaded, in my mind this kind of defeats the object  of using Maven.  It wasn't so bad when it was just the googlechrome executable, but recently the IEDriver has gone the same way and from Jim Evans' presentation at at the Selenium conference  this year, it looks like everybody else will be following the trend at some point.
 
 Well this left me with an itch to scratch and I have finally got around to doing something about it, introducing the driver-binary-downloader-maven-plugin.  It's a bit of a mouthful but I didn't want to use server in the name as people would think it was going to download the selenium server binaries, anyway it's just a name, how bad can it be?
