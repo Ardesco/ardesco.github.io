@@ -1,8 +1,8 @@
 $max-width: 1280px;
 
 body {
-  padding: 0px 0 20px 0px;
-  margin: 0px;
+  padding: 0 0 20px 0;
+  margin: 0;
   font: 14px/1.5 'OpenSansRegular', "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #f0e7d5;
   font-weight: normal;
@@ -92,9 +92,10 @@ blockquote {
 code {
   font-family: Monaco, Bitstream Vera Sans Mono, Lucida Console, Terminal, monospace;
   color: #efefef;
+  background: black;
   font-size: 13px;
-  margin: 0 4px;
-  padding: 4px 6px;
+  margin: 0;
+  padding: 0 0.3rem;
   border-radius: 2px;
 }
 
@@ -109,7 +110,7 @@ pre {
 
   code {
     color: #efefef;
-    text-shadow: 0px 1px 0px #000;
+    text-shadow: 0 1px 0 #000;
     margin: 0;
     padding: 0;
   }
@@ -151,7 +152,7 @@ dt {
 
 section {
   max-width: $max-width;
-  padding: 30px 0px 50px 0px;
+  padding: 30px 0 50px 0;
   margin: 20px 0;
   margin-top: 70px;
 
@@ -182,7 +183,7 @@ section {
       font-family: 'OpenSansRegular', "Helvetica Neue", Helvetica, Arial, sans-serif;
       font-weight: normal;
       color: #696969;
-      margin-top: 0px;
+      margin-top: 0;
     }
   }
 }

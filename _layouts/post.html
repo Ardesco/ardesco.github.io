@@ -24,6 +24,7 @@ layout: main
 <article>
     {{ content }}
 </article>
+<div id="disqus_thread"></div>
 <hr>
 <p>
     <a class="btn btn-rss" href="/feed.xml" target="_blank">Subscribe to RSS feed</a>
@@ -44,3 +45,16 @@ layout: main
     </ul>
 </div>
 
+<script>
+    let disqus_config = function () {
+        this.page.url = `{{ site.url }}{{ page.url }}`;
+        this.page.identifier = '{{ page.id }}';
+    };
+    (function() { // DON'T EDIT BELOW THIS LINE
+        let d = document, s = d.createElement('script');
+        s.src = 'https://ardesco.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>

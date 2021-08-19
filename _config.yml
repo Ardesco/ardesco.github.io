@@ -15,7 +15,7 @@
 # in the templates via {{ site.myvariable }}.
 title: Lazery Reflections
 description: Random thoughts about testing and technology.
-baseurl: "/"
+baseurl: ""
 url: "https://ardesco.lazerycode.com"
 
 # Build settings
@@ -44,15 +44,6 @@ author:
     github: https://github.com/ardesco
     twitter: https://twitter.com/ardesco
 
-#Navigation
-nav:
-  Home:
-    - '/'
-    - { Categories: '/categories' }
-    - { Tags: '/tags' }
-  About:
-    - '/about/'
-
 # Where are tags and categories displayed
-tag_page: '/tags'
-category_page: '/categories'
+tag_page: '/tags/'
+category_page: '/categories/'
