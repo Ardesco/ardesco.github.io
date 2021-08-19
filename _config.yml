@@ -22,7 +22,7 @@ url: "https://ardesco.lazerycode.com"
 markdown: kramdown
 
 sass:
-#  style: compressed
+  style: compressed
   sass_dir: _sass
 plugins:
   - jekyll-feed
