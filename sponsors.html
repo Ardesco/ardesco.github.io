@@ -6,13 +6,13 @@ permalink: /sponsors/
 
 <p>This page is a place for me to say thank you to the individuals, or companies that have contributed towards the open source code I upload to Github. Thank you for your
     generosity, every single donation helps.</p>
-<p>If you want to add your name or logo the the list below you can <a href="https://github.com/sponsors/Ardesco">sponsor me here</a></p>
+<p>If you want to add your name or logo to the list below you can <a href="https://github.com/sponsors/Ardesco">sponsor me here</a></p>
 <h3>Sponsors</h3>
 <div id="sponsors">
     {% for sponsor in site.data.sponsors %}
     <div class="sponsor">
-        <a href="{{ sponsor.url}}" target="_blank">
-            <div title="{{ sponsor.name}}" style="background-image: url('{{ sponsor.image}}')"></div>
+        <a href="{{ sponsor.url }}" target="_blank">
+            <div title="{{ sponsor.name}}" style="background-image: url('{{ sponsor.image }}')"></div>
         </a>
     </div>
     {% endfor %}
