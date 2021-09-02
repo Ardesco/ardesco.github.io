@@ -38,5 +38,5 @@ To use it is very simple, just add the following to your POM:
 </plugins>
 ```
 
-For more information see the project on [Github](https://github.com/Ardesco/selenium-standalone-server-plugin">https://github.com/Ardesco/selenium-standalone-server-plugin)
-If you want to see it in action have a look at my [Selenium Maven Template](https://github.com/Ardesco/Selenium-Maven-Template">https://github.com/Ardesco/Selenium-Maven-Template).
+For more information see the project on [Github](https://github.com/Ardesco/selenium-standalone-server-plugin)
+If you want to see it in action have a look at my [Selenium Maven Template](https://github.com/Ardesco/Selenium-Maven-Template).
