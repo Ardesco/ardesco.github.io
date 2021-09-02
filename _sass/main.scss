@@ -1,0 +1,194 @@
+@import 'constants';
+
+html {
+  font-size: 10px;
+
+  .content {
+    max-width: $site_max_width;
+    min-width: $site_min_width;
+    margin: 0 auto;
+    color: white;
+    background-color: $content_background;
+
+  }
+}
+
+a {
+  color: $text_red;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+#title {
+  height: 50rem;
+  width: 100%;
+  color: $text_black;
+  background-color: #e5eaf1;
+  background-image: url("/assets/images/header.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 0;
+  margin: 0 0 6rem;
+  position: relative;
+
+  * {
+    position: absolute;
+    padding: 0 5rem;
+    margin: 0;
+  }
+
+  h1 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 200;
+    font-size: 3rem;
+    text-transform: uppercase;
+    text-shadow: 1px 2px 2px black;
+    top: 14rem;
+  }
+
+  p {
+    font-size: 1.4rem;
+    top: 19rem;
+  }
+}
+
+@media (max-width: $small_title_max_width) {
+  #title {
+    background-position: top;
+
+    * {
+      padding: 0;
+      text-align: center;
+      width: 100%;
+    }
+
+    h1 {
+      top: 3rem;
+    }
+
+    p {
+      top: 7rem;
+    }
+  }
+}
+
+.spacer {
+  clear: both;
+  height: 3rem;
+}
+
+button {
+  height: 3rem;
+  padding: 0 3rem;
+
+  color: white;
+  background-color: $button_colour;
+  border-radius: 0.25rem;
+  border-color: $button_colour;
+  border-style: solid;
+  font-size: 1.3rem;
+
+  &:hover {
+    background-color: $button_hover;
+    border-color: $button_hover;
+  }
+}
+
+body {
+  font-size: 1.6rem;
+  background-color: $site_background;
+  font-family: 'Lato', sans-serif;
+
+  section {
+    margin: 0 10rem;
+
+    .post {
+      height: $post_total_height;
+      width: calc(33% - 2rem);
+      margin: 0 1rem 2rem;
+      color: $text_black;
+      font-weight: normal;
+      float: left;
+
+      .img-container {
+        height: $post_image_height;
+        width: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        border-bottom: 0.1rem solid black;
+      }
+
+      .post-content {
+        height: $post_excerpt_height;
+        background-color: white;
+        padding: 0 2.5rem;
+        position: relative;
+
+        .post-header {
+          margin: 0;
+          padding: 2rem 0 1rem;
+          font-size: 1.6rem;
+
+          a {
+            color: $button_colour;
+          }
+        }
+
+        .tags, .info {
+          margin: 0;
+          font-size: 1.3rem;
+        }
+
+        div {
+          margin: 0;
+        }
+
+        .more {
+          position: absolute;
+          bottom: 0;
+          margin: 0 0 1rem;
+        }
+      }
+    }
+  }
+
+  @media (max-width: $two_column_max_width) {
+    section {
+      margin: 0 5rem;
+
+      .post {
+        width: calc(50% - 2rem);
+      }
+    }
+  }
+
+  @media (max-width: $one_column_max_width) {
+    section {
+      margin: 0 1rem;
+
+      .post {
+        width: 100%;
+        padding-right: 2rem
+      }
+    }
+  }
+
+  @media (max-width: 379px) {
+    section {
+      .post {
+        margin-bottom: 5rem;
+
+        .post-content {
+          height: calc(#{$post_excerpt_height} + 2rem);
+        }
+      }
+    }
+  }
+
+
+}

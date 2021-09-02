@@ -2,6 +2,8 @@
 layout: post
 author: "Mark Collin"
 title: "Hacking Mouse Move Events Into Safari Driver The Nasty Way"
+image: /assets/images/feed/selenium.png
+attribution: "Selenium logo by Diego Molina"
 category: Testing
 tags: [Java, Robot, Safari, WebDriver]
 ---
@@ -23,7 +25,7 @@ The Robot is cross platform compliant so this solution could potentially work on
 
 For all of these examples I have created a class called RobotPowered with the following private variables and constructor:
 
-```Java
+```java
 private final Robot mouseObject;
 private final WebDriver driver;
 private final JavascriptExecutor executor;
@@ -37,7 +39,7 @@ public RobotPowered(WebDriver driver) throws AWTException {
 
 Now we know what is available to us let's start creating the code to move the mouse in safari.  First of all we have a basic robot implementation that will allow you to move the mouse to a specific X/Y coordinate on the screen
 
-```Java
+```java
 public void robotPoweredMoveMouseToAbsoluteCoordinates(int xCoordinates, int yCoordinates) {
   mouseObject.mouseMove(xCoordinates, yCoordinates);
   mouseObject.waitForIdle();
@@ -46,7 +48,7 @@ public void robotPoweredMoveMouseToAbsoluteCoordinates(int xCoordinates, int yCo
 
 It really doesn't get much easier than this, the code is self-explanatory and it will just work.  We do have a problem however; we don't know where the browser was loaded on the screen so if we tried to click on some coordinates we would effectively be clicking blind.  On to part two:
 
-```Java
+```java
 public void robotPoweredMoveMouseToCoordinatesOnPage(int xCoordinates, int yCoordinates) {
   //Get Browser dimensions
   int browserWidth = driver.manage().window().getSize().width;
@@ -74,7 +76,7 @@ This now calculates where the browser is on the screen, the size of the browser 
 
 This code is getting better, we now know that when we pass X/Y coordinates into the function it will click on the page, but that still leaves us guessing where on the page a specific WebElement is, well it's not a problem Selenium actually knows the coordinates of the elements on the page and it can tell you where they are:
 
-```Java
+```java
 public void robotPoweredMoveMouseToWebElementCoordinates(WebElement element) {
   //Get Browser dimensions
   int browserWidth = driver.manage().window().getSize().width;
@@ -106,14 +108,14 @@ We are now taking in a WebElement and getting the coordinates of its top left po
 
 What about drag and drop?  Well that's easy we can use the robot to hold and release the mouse button as well.
 
-```Java
+```java
 public void robotPoweredMouseDown() {
   mouseObject.mousePress(InputEvent.BUTTON1_DOWN_MASK);
   mouseObject.waitForIdle();
 }
 ```
 
-```Java
+```java
 public void robotPoweredMouseUp() {
   mouseObject.mouseRelease(InputEvent.BUTTON1_DOWN_MASK);
   mouseObject.waitForIdle();
@@ -122,7 +124,7 @@ public void robotPoweredMouseUp() {
 
 You now have everything you need to perform mouse actions with the Safari driver, unfortunately there is another caveat.  I have found that when safari initially loads it doesn't always have focus and when it doesn't have focus it ignores the mouse events, the solution is to make the robot click on the window to set focus at the start of your test, here's a quick click function to let you do just that:
 
-```Java
+```java
 public void robotPoweredClick() {
   mouseObject.mousePress(InputEvent.BUTTON1_DOWN_MASK);
   mouseObject.mouseRelease(InputEvent.BUTTON1_DOWN_MASK);
@@ -132,10 +134,10 @@ public void robotPoweredClick() {
 
 Finally here's a little trick to find out what browser the current driver object is driving, you can use this to add in some specific code branches for safari:
 
-```Java
+```java
 ((RemoteWebDriver) driver).getCapabilities().getBrowserName();
 ```
 
 Once again I must reiterate that the above code is a hack and has its limitations, it does however get you out of a tight spot if you need to run your hover/drag and drop automated tests against Safari.
 
-All of the above code is available on github at [https://github.com/Ardesco/Powder-Monkey/blob/master/src/main/java/com/lazerycode/selenium/tools/RobotPowered.java](https://github.com/Ardesco/Powder-Monkey/blob/master/src/main/java/com/lazerycode/selenium/tools/RobotPowered.java){:target="_blank"}
+All of the above code is available on [Github](https://github.com/Ardesco/Powder-Monkey/blob/master/src/main/java/com/lazerycode/selenium/tools/RobotPowered.java).

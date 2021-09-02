@@ -1,17 +1,20 @@
 ---
-layout: main
-title: "Thank You"
+layout: page
+title: "Thank you!"
 permalink: /sponsors/
 ---
 
-<h1 class="centered">Thank You</h1>
-<p>This page is a little shrine to say thank you to those peopele who contribute towards the open source code I upload to Github.</p>
-<p>Thank you for your generosity, every donation helps and maybe one day I can just spend my time working on Open Source (We can all dream hey).</p>
-<p>
-    <span>Current Sponsors:</span>
-    <ul>
-        <li>
-            <a href="https://github.com/ubikloadpack" target="_blank">ubikloadpack</a>
-        </li>
-    </ul>
-</p>
+<p>This page is a place for me to say thank you to the individuals, or companies that have contributed towards the open source code I upload to Github. Thank you for your
+    generosity, every single donation helps.</p>
+<p>If you want to add your name or logo the the list below you can <a href="https://github.com/sponsors/Ardesco">sponsor me here</a></p>
+<h3>Sponsors</h3>
+<div id="sponsors">
+    {% for sponsor in site.data.sponsors %}
+    <div class="sponsor">
+        <a href="{{ sponsor.url}}" target="_blank">
+            <div title="{{ sponsor.name}}" style="background-image: url('{{ sponsor.image}}')"></div>
+        </a>
+    </div>
+    {% endfor %}
+</div>
+<div class="spacer"></div>

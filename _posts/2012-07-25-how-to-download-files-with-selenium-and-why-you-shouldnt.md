@@ -3,6 +3,8 @@ layout: post
 author: "Mark Collin"
 title: "How To Download Files With Selenium And Why You Shouldn’t"
 redirect_from: "/index.php/2012/07/how-to-download-files-with-selenium-and-why-you-shouldnt/"
+image: /assets/images/feed/wrong_way.jpg
+attribution: "Photo by Kind and Curious on Unsplash"
 category: Testing 
 tags: [Java, Maven, Selenium, WebDriver]
 ---

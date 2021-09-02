@@ -2,6 +2,8 @@
 layout: post
 author: "Mark Collin"
 title: "JMeter Maven Plugin 1.9.0 Released"
+image: /assets/images/feed/jmeter_maven.png
+attribution: "Jmeter Maven plugin"
 category: OSS
 tags: [Automated Testing, JMeter, Performance Testing]
 ---
@@ -27,7 +29,7 @@ So on to the release notes:
 - Issue #80 - Integration Tests Failing With Maven 2.
 - Issue #77 - JMeter plugins artifacts now placed in lib/ext directory. You can specify which artifacts are JMeter plugins using the new jmeterPlugins configuration setting:
 
-```xml">
+```xml
 <configuration>
     <jmeterPlugins>
         <plugin>
@@ -40,7 +42,7 @@ So on to the release notes:
 
 - Added the ability to configure the JMeter JVM:
 
-```xml">
+```xml
 <configuration>
     <jMeterProcessJVMSettings>
         <xms>1024</xms>
@@ -55,7 +57,7 @@ So on to the release notes:
 
 - Issue #82 - Allow users to specify the resultsDir:
 
-```xml">
+```xml
 <configuration>
     <resultsDirectory>/tmp/jmeter</resultsDirectory>
 </configuration>
@@ -65,7 +67,7 @@ So on to the release notes:
 - Merge pull request #78 from Mike Patel - Changes to allow system / global jmeter properties to be sent to remote clients.
 - Issue #89 - Add support for advanced log config. If you add a "logkit.xml" into the &lt;testFilesDirectory&gt; it will now be copied into the /bin folder. If one does not exist the default one supplied with JMeter will be used instead. If you don't want to call your advanced log config file "logkit.xml", you can specify the filename using:
 
-```xml">
+```xml
 <configuration>
     <logConfigFilename>myFile.xml</logConfigFilename>
 </configuration>

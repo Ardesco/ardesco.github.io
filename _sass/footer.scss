@@ -1,0 +1,22 @@
+@import 'constants';
+
+.feed {
+  text-align: center;
+  background-color: $footer_grey;
+  padding: 5rem;
+
+  button {
+    height: 5rem;
+    font-size: 1.8rem;
+    font-weight: 300;
+  }
+}
+
+.copyright {
+  text-align: center;
+  vertical-align: middle;
+  background-color: $footer_background;
+  padding: 2rem;
+  font-size: 1.4rem;
+  color: white;
+}

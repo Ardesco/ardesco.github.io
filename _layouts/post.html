@@ -1,61 +1,61 @@
 ---
 layout: main
 ---
-
-<div id="title">
+<div class="post-container">
     <h1>{{ page.title }}</h1>
-    <hr>
     <div class="tags">
-        <span class="left">Category: <a href="{{ site.category_page }}#{{ page.category | slugify }}" class="post-tag">{{ page.category }}</a></span>
+        <span>Category: <a href="{{ site.category_page }}#{{ post.category | slugify }}">{{ page.category }}</a></span>
+
         {% if page.tags %}
-        <span class="right">Tags:
-        {% for tag in page.tags %}
-        <a href="{{ site.tag_page }}#{{ tag | slugify }}" class="post-tag">{{ tag }}</a> {% if forloop.last == false %},{% endif %}
-        {% endfor %}
-    </span>
+        <span> Tags:
+                    {% for tag in page.tags %}
+                        <a href="{{ site.tag_page }}#{{ tag | slugify }}">{{ tag }}</a>{% if forloop.last == false %},{% endif %}
+                    {% endfor %}
+                </span>
+        {% endif %}
     </div>
-    <div class="clear"></div>
-    {% endif %}
-    <div>
-        <span class="credits left">Posted by {{ page.author }}</span>
-        <span class="credits right">{{ page.date | date: '%A %B %d, %Y' }}</span>
+    <p class="info">{{ page.date | date: '%A %B %d, %Y' }} | {{ page.author }} </p>
+    <div class="post-img" title="{{ page.attribution }}" style="background-image: url('{{ page.image }}')"></div>
+    <article>
+        {{ content }}
+    </article>
+    <hr>
+    <div id="disqus_thread"></div>
+    <div id="related">
+        <hr>
+        <h2>Related Posts</h2>
+        <div class="related-posts">
+            {% assign maxRelated = 3 %}
+            {% for tag in site.categories %}
+                {% if tag [0] == page.category%}
+                    {% for post in tag[1] %}
+                        {% if post.url != page.url %}
+                            <div class="related-post">
+                                <a href="{{ post.url }}">
+                                    <div class="related-post-img" title="{{ post.attribution }}" style="background-image: url('{{ post.image }}')"></div>
+                                    <p>{{ post.title }}</p>
+                                </a>
+                                <small>{{ post.date | date_to_string }}</small>
+                            </div>
+                            {% assign maxRelatedCounter = maxRelatedCounter | plus: 1 %}
+                            {% if maxRelatedCounter >= maxRelated %}
+                                {% break %}
+                            {% endif %}
+                        {% endif %}
+                    {% endfor %}
+                {% endif %}
+            {% endfor %}
+        </div>
     </div>
+    <div class="spacer"></div>
 </div>
-<article>
-    {{ content }}
-</article>
-<div id="disqus_thread"></div>
-<hr>
-<p>
-    <a class="btn btn-rss" href="/feed.xml" target="_blank">Subscribe to RSS feed</a>
-</p>
-<div class="related">
-    <h2>Related Posts</h2>
-    <ul class="related-posts">
-        {% for post in site.related_posts limit:3 %}
-        <li>
-            <h3>
-                <a href="{{ post.url }}">
-                    {{ post.title }}
-                    <small>{{ post.date | date_to_string }}</small>
-                </a>
-            </h3>
-        </li>
-        {% endfor %}
-    </ul>
-</div>
+
 
 <script>
-    var disqus_config = function () {
-        this.page.url = `{{ site.url }}{{ page.url }}`;
-        this.page.identifier = '{{ page.id }}';
-    };
-    (function() { // DON'T EDIT BELOW THIS LINE
-        var d = document, s = d.createElement('script');
-        s.src = 'https://https-ardesco-lazerycode-com.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-    })();
+    let parentDiv = document.getElementById("related");
+    let children = parentDiv.getElementsByClassName("related-post");
+    if (!children || children.length === 0) {
+        parentDiv.style.display = "none";
+    }
 </script>
-<script id="dsq-count-scr" src="//https-ardesco-lazerycode-com.disqus.com/count.js" async></script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+{% include comments.html %}

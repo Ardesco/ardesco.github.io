@@ -2,12 +2,14 @@
 layout: post
 author: "Mark Collin"
 title: "JMeter Maven Plugin 1.8.0 Released"
+image: /assets/images/feed/jmeter_maven.png
+attribution: "Jmeter Maven plugin"
 category: OSS
 tags: [Automated Testing, JMeter, Performance Testing]
 ---
 I'm a bit late adding this here (I've been distracted updating the wiki for the plugin and doing a bit of running around closing off issues) but thought it would be a good idea to start posting stuff about the JMeter Maven plugin here as well.  Version 1.8.0 of the JMeter Maven Plugin is now available in maven central.
 
-The source code is available on [Github](https://github.com/Ronnie76er/jmeter-maven-plugin){:target="_blank"} and there is now also an up to date [Wiki](https://github.com/Ronnie76er/jmeter-maven-plugin/wiki){:target="_blank"} as well.
+The source code is available on [Github](https://github.com/Ronnie76er/jmeter-maven-plugin) and there is now also an up to date [Wiki](https://github.com/Ronnie76er/jmeter-maven-plugin/wiki) as well.
 
 ## Release Notes
 
@@ -58,7 +60,7 @@ The performance tests will be skipped.
 ```
 
 
-- Set default timestamp to an ISO_8601 timestamp.  The formatter now used in the configuration option `<resultsFileNameDateFormat>`is a JodaTime DateTimeFormatter (See [http://joda-time.sourceforge.net/apidocs/org/joda/time/format/DateTimeFormat.html](http://joda-time.sourceforge.net/apidocs/org/joda/time/format/DateTimeFormat.html){:target="_blank"}):
+- Set default timestamp to an ISO_8601 timestamp.  The formatter now used in the configuration option `<resultsFileNameDateFormat>`is a JodaTime DateTimeFormatter, [See here](http://joda-time.sourceforge.net/apidocs/org/joda/time/format/DateTimeFormat.html).
 
 ```xml
 <resultsFileNameDateFormat >MMMM, yyyy</resultsFileNameDateFormat >

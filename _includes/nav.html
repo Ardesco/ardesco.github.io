@@ -1,8 +1,20 @@
-<div id="navbar">
-    <nav>
-        <ul>
-            <li class="navlink"><a href="/">Home</a></li>
-            <li class="navlink"><a href="/sponsors">Sponsors</a></li>
+<nav>
+    <div><img src="/assets/images/logo/icon1_on_white_48x48.png" alt="icon"></div>
+    <div class="site_name">LAZERY REFLECTIONS</div>
+    <div id="toggleMenu">
+        <input type="checkbox"/>
+        <span></span>
+        <span></span>
+        <span></span>
+        <ul id="menu">
+            {% for nav in site.data.navigation %}
+            <li><a href="{{ nav.url }}" {% if nav.url== page.url %} class="active" {% endif %}>{{ nav.text }}</a></li>
+            {% endfor %}
         </ul>
-    </nav>
-</div>
+    </div>
+    <ul class="wide_menu">
+        {% for nav in site.data.navigation %}
+        <li><a href="{{ nav.url }}" {% if nav.url== page.url %} class="active" {% endif %}>{{ nav.text }}</a></li>
+        {% endfor %}
+    </ul>
+</nav>

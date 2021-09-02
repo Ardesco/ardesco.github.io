@@ -2,6 +2,8 @@
 layout: post
 author: "Mark Collin"
 title: "Introducing The Driver Binary Downloader Maven Plugin For Selenium"
+image: /assets/images/feed/dir.jpg
+attribution: "Photo by Pixabay on Pexels"
 category: Testing
 tags: [Automated Testing, Java, Selenium, WebDriver]
 ---

@@ -1,27 +1,22 @@
 ---
 layout: page
-title: Tags
+title: Available tags
 ---
 
-<div class="tags-expo">
-    <div class="tags-expo-list">
-        Available:
-        {% for tag in site.tags %}
-        <a href="#{{ tag[0] | slugify }}" class="post-tag">{{ tag[0] }}</a>
-        {% endfor %}
+<div>
+    <div>
+        {% for tag in site.tags %}<a href="#{{ tag[0] | slugify }}">{{ tag[0] }}</a>{% if forloop.last == false %}, {% endif %} {% endfor %}
     </div>
     <hr/>
-    <div class="tags-expo-section">
+    <div>
         {% for tag in site.tags %}
         <h2 id="{{ tag[0] | slugify }}">{{ tag[0] }}</h2>
-        <ul class="tags-expo-posts">
+        <ul>
             {% for post in tag[1] %}
-            <a class="post-title" href="{{ site.baseurl }}{{ post.url }}">
-                <li>
-                    {{ post.title }}
-                    <small class="post-date">{{ post.date | date_to_string }}</small>
-                </li>
-            </a>
+            <li>
+                <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+                <small>{{ post.date | date_to_string }}</small>
+            </li>
             {% endfor %}
         </ul>
         {% endfor %}

@@ -2,6 +2,8 @@
 layout: post
 author: "Mark Collin"
 title: "Waiting for Angular"
+image: /assets/images/feed/waiting.jpg
+attribution: "Photo by Joshua Earle on Unsplash"
 category: Testing
 tags: [Java, AngularJS, Selenium, WebDriver]
 ---
@@ -13,13 +15,15 @@ Here's an ExpectedCondition that will wait for Angular to finish processing stuf
 
 ```java
 public static ExpectedCondition angularHasFinishedProcessing() {
-        return new ExpectedCondition() {
-            @Override
-            public Boolean apply(WebDriver driver) {
-                JavascriptExecutor jsexec = ((JavascriptExecutor) driver)
-                String result = jsexec.executeScript("return (window.angular != null) && (angular.element(document).injector() != null) && (angular.element(document).injector().get('$http').pendingRequests.length === 0)")
-                return Boolean.valueOf(result);
-            }
-        };
-    }
+    return new ExpectedCondition() {
+        @Override
+        public Boolean apply(WebDriver driver) {
+            JavascriptExecutor jsexec = ((JavascriptExecutor) driver);
+            String result = (String) jsexec.executeScript("return (window.angular != null) && " +
+                    "(angular.element(document).injector() != null) && " +
+                    "(angular.element(document).injector().get('$http').pendingRequests.length === 0)");
+            return Boolean.valueOf(result);
+        }
+    };
+}
 ```

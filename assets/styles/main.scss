@@ -1,9 +1,12 @@
 ---
-
 ---
 
-@import 'normalize';
 @import 'fonts';
-@import 'rouge-base16-dark';
-@import 'jekyll-theme-midnight';
-@import 'custom';
+@import 'constants';
+@import 'normalize';
+@import 'navigation';
+@import 'main';
+@import 'post';
+@import 'code';
+@import 'footer';
+@import 'sponsors';

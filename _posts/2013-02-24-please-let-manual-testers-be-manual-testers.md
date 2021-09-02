@@ -2,6 +2,8 @@
 layout: post
 author: "Mark Collin"
 title: "Please Let Manual Testers Be Manual Testers"
+image: /assets/images/feed/tester.jpg
+attribution: "Photo by JESHOOTS.COM on Unsplash"
 category: Testing
 tags: [Manual Testing]
 ---

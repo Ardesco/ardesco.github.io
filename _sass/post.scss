@@ -1,0 +1,129 @@
+@import 'constants';
+
+.post-container, .page {
+  margin: 0 5rem;
+  color: white;
+  font-weight: 300;
+
+  h1 {
+    margin: 1rem 0 0 0;
+    font-size: 2.5rem;
+    font-weight: 300;
+  }
+
+  h2 {
+    font-weight: 300;
+  }
+
+  .post-img {
+    margin: auto;
+    height: 40rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .post-header {
+    margin: 0;
+    padding: 2rem 0 1rem;
+    font-size: 1.6rem;
+  }
+
+  .tags {
+    margin: 0;
+    font-size: 1.3rem;
+  }
+
+  .info {
+    margin: 0 0 1rem;
+    font-size: 1.3rem;
+  }
+
+  hr {
+    color: #936d2a;
+    background-color: #936d2a;
+    height: 2px;
+    border: 0;
+    text-shadow: 1px 2px 2px black;
+  }
+
+  article {
+    margin-bottom: 4rem;
+  }
+
+  blockquote {
+    background: $quote_background;
+    border-left: 1rem solid $quote_border;
+    padding: 2rem;
+    width: fit-content;
+    font-style: italic;
+    border-radius: 0.4rem;
+  }
+
+  blockquote:before {
+    color: $quote_border;
+    content: open-quote;
+    font-size: 4rem;
+    line-height: 0.1rem;
+    margin-right: 0.25rem;
+    vertical-align: -1.2rem;
+  }
+
+  blockquote:after {
+    color: $quote_border;
+    content: close-quote;
+    font-size: 4rem;
+    line-height: 0.1rem;
+    margin-right: 0.25rem;
+    vertical-align: -1.2rem;
+  }
+
+  blockquote p {
+    display: inline;
+  }
+}
+
+#related {
+  margin: 0 auto;
+  max-width: 125rem;
+}
+
+.related-posts {
+  div {
+    float: left;
+    width: calc(33% - 4rem);
+    max-width: 39rem;
+    margin: 0 2rem;
+
+    .related-post-img {
+      margin: 0 auto 1rem;
+      height: 15.5rem;
+      width: 100%;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    p {
+      margin: 0;
+      padding: 0;
+      color: white;
+    }
+
+    small {
+      margin: 0;
+      padding: 0;
+      color: white;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+
+  @media (max-width: 649px) {
+    div {
+      width: calc(100% - 4rem);
+    }
+  }
+}

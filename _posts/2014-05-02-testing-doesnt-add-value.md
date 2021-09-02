@@ -2,6 +2,8 @@
 layout: post
 author: "Mark Collin"
 title: "Testing doesn’t add value?"
+image: /assets/images/feed/money.jpg
+attribution: "Photo by John McArthur on Unsplash"
 category: Testing
 tags: [Thoughts]
 ---
