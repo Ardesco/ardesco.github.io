@@ -14,6 +14,7 @@ sass:
 plugins:
   - jekyll-feed
   - jekyll-redirect-from
+  - jekyll-sitemap
 plugins_dir: jekyll-redirect-from
 whitelist:
   - jekyll-redirect-from
