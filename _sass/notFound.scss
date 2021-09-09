@@ -1,0 +1,31 @@
+@import 'constants';
+
+
+#not-found{
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+
+}
+
+#searching{
+  height: 50rem;
+  width: 100%;
+  color: $button_hover;
+  background-color: #e5eaf1;
+  background-image: url("/assets/images/searching.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 0;
+  margin: 0;
+  position: relative;
+
+  h1 {
+    top: 25%;
+    font-size: 16rem;
+    position: relative;
+    margin: 0;
+    padding: 0;
+  }
+}
