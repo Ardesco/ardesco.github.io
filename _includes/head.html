@@ -1,10 +1,11 @@
 <head>
+    <title>{{ page.title | default: "Lazery reflections" }}</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>{{ page.title | default: "Lazery reflections" }}</title>
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src https://*; child-src 'none';">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <link rel="stylesheet" type="text/css" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
     <link rel="stylesheet" type="text/css" href="/assets/styles/main.css?v=' | append: site.github.build_revision | relative_url }}">
     <link rel="icon" type="image/png" href="/assets/favicon.ico"/>
     <link rel="alternate" type="application/atom+xml" title="{{ site.title }}" href="/feed.xml">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 </head>
