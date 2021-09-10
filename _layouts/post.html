@@ -15,7 +15,7 @@ layout: main
         {% endif %}
     </div>
     <p class="info">{{ page.date | date: '%A %B %d, %Y' }} | {{ page.author }} </p>
-    <div class="post-img" title="{{ page.attribution }}" style="background-image: url('{{ page.image }}')"></div>
+    <div class="post-img" title="{{ page.attribution }}" style="background-image: url('{{ site.url }}{{ page.image }}')"></div>
     <article>
         {{ content }}
     </article>
@@ -32,7 +32,7 @@ layout: main
                         {% if post.url != page.url %}
                             <div class="related-post">
                                 <a href="{{ post.url }}">
-                                    <div class="related-post-img" title="{{ post.attribution }}" style="background-image: url('{{ post.image }}')"></div>
+                                    <div class="related-post-img" title="{{ post.attribution }}" style="background-image: url('{{ site.url }}{{ post.image }}')"></div>
                                     <p>{{ post.title }}</p>
                                 </a>
                                 <small>{{ post.date | date_to_string }}</small>

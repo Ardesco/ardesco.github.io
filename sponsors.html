@@ -12,7 +12,7 @@ permalink: /sponsors/
     {% for sponsor in site.data.sponsors %}
     <div class="sponsor">
         <a href="{{ sponsor.url }}" target="_blank">
-            <div title="{{ sponsor.name}}" style="background-image: url('{{ sponsor.image }}')"></div>
+            <div title="{{ sponsor.name}}" style="background-image: url('{{ site.url }}{{ sponsor.image }}')"></div>
         </a>
     </div>
     {% endfor %}

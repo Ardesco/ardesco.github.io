@@ -10,7 +10,7 @@ layout: main
     {% for post in site.posts %}
     <div class="post">
         <a href="{{ post.url }}">
-            <div class="img-container" title="{{post.attribution}}" style="background-image: url('{{ post.image }}')"></div>
+            <div class="img-container" title="{{post.attribution}}" style="background-image: url('{{ site.url }}{{ post.image }}')"></div>
         </a>
         <div class="post-content">
             <h2 class="post-header"><a href="{{ post.url }}">{{ post.title }}</a></h2>
