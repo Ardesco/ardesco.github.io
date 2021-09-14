@@ -2,6 +2,8 @@
 layout: post
 author: "Mark Collin"
 title: "Automated Tests Should Be Living Documentation"
+redirect_from:
+ - "/index.php/2014/09/automated-tests-should-be-living-documentation/"
 image: /assets/images/feed/writing.jpg
 attribution: "Photo by Aaron Burden on Unsplash"
 category: Testing

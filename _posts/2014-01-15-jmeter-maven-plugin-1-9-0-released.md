@@ -2,6 +2,8 @@
 layout: post
 author: "Mark Collin"
 title: "JMeter Maven Plugin 1.9.0 Released"
+redirect_from:
+- "/index.php/2014/01/jmeter-maven-plugin-version-1-9-0-released/"
 image: /assets/images/feed/jmeter_maven.png
 attribution: "Jmeter Maven plugin"
 category: OSS

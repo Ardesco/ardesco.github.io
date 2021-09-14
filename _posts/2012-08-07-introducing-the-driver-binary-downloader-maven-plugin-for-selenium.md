@@ -2,6 +2,8 @@
 layout: post
 author: "Mark Collin"
 title: "Introducing The Driver Binary Downloader Maven Plugin For Selenium"
+redirect_from:
+- "/index.php/2012/08/introducing-the-driver-binary-downloader-maven-plugin-for-selenium/"
 image: /assets/images/feed/dir.jpg
 attribution: "Photo by Pixabay on Pexels"
 category: Testing

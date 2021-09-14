@@ -2,6 +2,8 @@
 layout: post
 author: "Mark Collin"
 title: "Stop Moving So I Can Click You Dammit!"
+redirect_from:
+- "/index.php/2013/02/stop-moving-so-i-can-click-you-dammit/"
 image: /assets/images/feed/stop_moving.jpg
 attribution: "Photo by Charles Deluvio on Unsplash"
 category: Testing
