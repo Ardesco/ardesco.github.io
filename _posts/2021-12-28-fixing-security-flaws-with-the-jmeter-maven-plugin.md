@@ -2,8 +2,8 @@
 layout: post
 author: "Mark Collin"
 title: "Fixing JMeter security flaws with the JMeter Maven Plugin"
-image: /assets/images/feed/jmeter_maven.png
-attribution: "Jmeter Maven plugin"
+image: /assets/images/feed/working_on_laptop.jpg
+attribution: "Photo by Nubelson Fernandes on Unsplash"
 category: OSS
 tags: [Automated Testing, JMeter, Performance Testing]
 ---
