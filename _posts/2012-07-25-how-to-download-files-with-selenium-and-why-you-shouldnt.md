@@ -5,6 +5,7 @@ title: "How To Download Files With Selenium And Why You Shouldn’t"
 redirect_from: 
  - "/index.php/2012/07/how-to-download-files-with-selenium-and-why-you-shouldnt/"
  - "/testing/webdriver/2012/07/25/how-to-download-files-with-selenium-and-why-you-shouldnt.html"
+ - "/testing/2012/07/25/null"
 image: /assets/images/feed/wrong_way.jpg
 attribution: "Photo by Kind and Curious on Unsplash"
 category: Testing 
