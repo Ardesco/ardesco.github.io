@@ -7,6 +7,7 @@ attribution: "Jmeter Maven plugin"
 category: OSS
 tags: [Automated Testing, JMeter, Performance Testing]
 ---
+
 This is a minor release to use the newly released JMeter 5.5 by default
 
 As always the source code is available on [Github](https://github.com/jmeter-maven-plugin/jmeter-maven-plugin).
